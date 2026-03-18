@@ -12,6 +12,9 @@ To design and simulate an Astable Multivibrator using NE555 in Proteus Design Su
 •	Connecting wires
 ## Circuit Diagram
 Pin Configuration of 555 Timer:
+
+<img width="692" height="421" alt="image" src="https://github.com/user-attachments/assets/eee9f457-44b9-409f-8a3f-f599fe2f85ff" />
+
 •	Pin 1 → Ground
 •	Pin 2 → Trigger
 •	Pin 3 → Output
@@ -37,10 +40,21 @@ Pin Configuration of 555 Timer:
 6.	Observe square wave output at Pin 3.
 7.	Measure time period and frequency.
 ## Tabulation
-S.No	        R1 (kΩ)	      R2 (kΩ)	       C (µF)	        Theoretical Frequency	          Practical Frequency
+| Sl. No | Capacitor Voltage (Vc)      | Condition       | Output Voltage (Vo) |
+| ------ | --------------------------- | --------------- | ------------------- |
+| 1      | 1/3 VCC ≈ 1.67 V            | Trigger level   | Output HIGH (5 V)   |
+| 2      | Charging (1.67 → 3.33 V)    | During TON      | Output = 5 V        |
+| 3      | 2/3 VCC ≈ 3.33 V            | Threshold level | Output LOW (0 V)    |
+| 4      | Discharging (3.33 → 1.67 V) | During TOFF     | Output = 0 V        |
+| 5      | Reaches 1/3 VCC             | Cycle repeats   | Output HIGH         |
+
+
 ## Waveforms
 •	Output (Pin 3) → Square wave
 •	Capacitor voltage → Exponential charging & discharging waveform
+
+<img width="691" height="439" alt="image" src="https://github.com/user-attachments/assets/d664a63b-1ed7-4877-9e6a-565ca53fc890" />
+
 ## Result
 The Astable Multivibrator using NE555 Timer IC was successfully designed and simulated in Proteus.
 A continuous square wave output was obtained.
@@ -52,7 +66,21 @@ The practical frequency closely matches the theoretical frequency.
 •	Used in clock generation, LED flashing, and tone generation.
 ## Viva Questions
 1.	What are the operating modes of 555 timer?
+
+Operating Modes: Monostable, Astable, and Bistable modes.
+
 2.	What are the threshold levels in astable mode?
+
+Threshold Levels in Astable Mode: The capacitor charges and discharges
+
 3.	Write the frequency formula.
+
+f=(R1​+2R2​)C1.44​
+
 4.	What is duty cycle?
+
+Duty Cycle: The percentage of time the output remains HIGH in one complete cycle.
+
 5.	What happens if R2 increases?
+
+If R2 Increases: The time period and duty cycle increase while frequency decreases.
